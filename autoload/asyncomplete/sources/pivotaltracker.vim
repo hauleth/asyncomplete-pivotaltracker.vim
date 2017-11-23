@@ -27,7 +27,7 @@ func! asyncomplete#sources#pivotaltracker#fetch(cb) abort
     let l:cmd = ['curl',
                 \  '-X', 'GET',
                 \  '-H', 'X-TrackerToken:'.$PT_TOKEN,
-                \  'https://www.pivotaltracker.com/services/v5/projects/'.$PT_ID.'/stories?fields=name&with_state=started']
+                \  'https://www.pivotaltracker.com/services/v5/projects/'.$PT_ID.'/stories?fields=name&filter=-state:accepted%20-state:unscheduled']
 
     call jobstart(l:cmd,
                 \ {
