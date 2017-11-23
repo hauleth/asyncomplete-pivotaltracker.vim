@@ -13,3 +13,6 @@ autocmd User asyncomplete_setup call asyncomplete#register_source({
             \ 'completor': function('asyncomplete#sources#pivotaltracker#completor'),
             \ })
 ```
+
+[pt]: https://pivotaltracker.com "PivotalTracker"
+[ac]: https://github.com/prabirshrestha/asyncomplete.vim "asyncomplete.vim"
